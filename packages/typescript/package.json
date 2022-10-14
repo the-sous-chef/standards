@@ -1,0 +1,31 @@
+{
+  "name": "@thesouschef/eslint-config-ts",
+  "version": "0.0.0",
+  "description": "Common eslint configs for Sous Chef TS projects",
+  "main": "index.js",
+  "scripts": {
+    "format": "npm run lint -- --fix",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-sous-chef/standards.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-sous-chef/standards/issues"
+  },
+  "homepage": "https://github.com/the-sous-chef/standards#readme",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "@thesouschef/eslint-config": "^1.0.0"
+  }
+}

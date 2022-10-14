@@ -1,0 +1,32 @@
+{
+  "name": "@thesouschef/eslint-config-react-native",
+  "version": "0.0.0",
+  "description": "Common eslint configs for Sous Chef JS projects",
+  "main": "index.js",
+  "scripts": {
+    "format": "npm run lint -- --fix",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-sous-chef/standards.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "javascript",
+    "typescript",
+    "react",
+    "react-native"
+  ],
+  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-sous-chef/standards/issues"
+  },
+  "homepage": "https://github.com/the-sous-chef/standards#readme",
+  "peerDependencies": {
+    "@thesouschef/eslint-config": "^1.0.0",
+    "eslint-plugin-react-native": "^4.0.0"
+  }
+}

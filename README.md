@@ -1,2 +1,2 @@
-# eslint-config
-common eslint configs for Sous Chef JS projects
+# Standards
+Common standards/styles configs for Sous Chef JS/TS projects

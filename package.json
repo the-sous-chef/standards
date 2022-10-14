@@ -1,0 +1,62 @@
+{
+  "name": "standards",
+  "version": "0.0.0",
+  "description": "Common style and standards configs for Sous Chef JS/TS projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev",
+    "format": "turbo run format",
+    "lint": "turbo run lint",
+    "prepare": "is-ci || sh ./scripts/prepare.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-sous-chef/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "javascript",
+    "typescript",
+    "react"
+  ],
+  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+  "license": "ISC",
+  "lint-staged": {
+    "*.(t|j)s(x)?": "npm run format"
+  },
+  "bugs": {
+    "url": "https://github.com/the-sous-chef/eslint-config/issues"
+  },
+  "homepage": "https://github.com/the-sous-chef/eslint-config#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "commitlint": "^17.1.2",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1",
+    "prettier-eslint-cli": "^7.1.0",
+    "semantic-release": "^19.0.5",
+    "turbo": "^1.5.6"
+  },
+  "volta": {
+    "node": "18.7.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

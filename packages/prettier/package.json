@@ -1,0 +1,27 @@
+{
+  "name": "@thesouschef/prettier",
+  "version": "0.0.0",
+  "description": "Common prettier config for Sous Chef JS projects",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-sous-chef/standards.git"
+  },
+  "keywords": [
+    "prettier",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-sous-chef/standards/issues"
+  },
+  "homepage": "https://github.com/the-sous-chef/standards#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "peerDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

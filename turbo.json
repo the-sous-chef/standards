@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "lint": {
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
+    "deploy": {
+      "dependsOn": ["lint"],
+      "outputs": []
+    }
+  }
+}
