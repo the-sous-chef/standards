@@ -9,6 +9,15 @@ In your [eslint config file](https://eslint.org/docs/latest/user-guide/configuri
 
 ```
 extends: ["@thesouschef/eslint-config", "@thesouschef/eslint-config-ts"],
+parserOptions: {
+    tsconfigRootDir: "./",
+    project: "./tsconfig.json",
+},
+"import/resolver": {
+    typescript: {
+        project: "./tsconfig.json",
+    },
+},
 ```
 
 For more reference, see the [documentation](https://eslint.org/docs/latest/user-guide/configuring/configuration-files#extending-configuration-files).

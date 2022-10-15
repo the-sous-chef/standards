@@ -1,6 +1,6 @@
 {
   "name": "@thesouschef/eslint-config-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Common eslint configs for Sous Chef TS projects",
   "main": "index.js",
   "scripts": {

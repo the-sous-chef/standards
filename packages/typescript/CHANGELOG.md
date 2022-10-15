@@ -1,5 +1,11 @@
 # @thesouschef/eslint-config-ts
 
+## 1.0.4
+
+### Patch Changes
+
+- fix: have user provide dir and tsconfig file path
+
 ## 1.0.3
 
 ### Patch Changes
