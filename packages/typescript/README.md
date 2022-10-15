@@ -5,10 +5,10 @@ npm install -D @thesouschef/eslint-config-ts
 ```
 ## Usage
 
-In your [eslint config file](https://eslint.org/docs/latest/user-guide/configuring/) for vanilla TS projects, extend this library like:
+In your [eslint config file](https://eslint.org/docs/latest/user-guide/configuring/) for vanilla TS projects, extend this library and add the following to your config:
 
 ```
-extends: ["@thesouschef/eslint-config", "@thesouschef/eslint-config-ts"]
+extends: ["@thesouschef/eslint-config", "@thesouschef/eslint-config-ts"],
 ```
 
 For more reference, see the [documentation](https://eslint.org/docs/latest/user-guide/configuring/configuration-files#extending-configuration-files).
