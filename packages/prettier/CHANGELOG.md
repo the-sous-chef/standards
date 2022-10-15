@@ -1,5 +1,11 @@
 # @thesouschef/prettier
 
+## 1.0.2
+
+### Patch Changes
+
+- 046b96f: fix: various README issues
+
 ## 1.0.1
 
 ### Patch Changes

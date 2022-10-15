@@ -1,5 +1,16 @@
 # @thesouschef/eslint-config-ts
 
+## 1.0.2
+
+### Patch Changes
+
+- 046b96f: fix: various README issues
+- b136212: fix: use current work dir for tsconfig path, fix formatting
+- 4202e0f: fix: forgot to add publish config to ts package
+- Updated dependencies [046b96f]
+- Updated dependencies [b136212]
+  - @thesouschef/eslint-config@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes

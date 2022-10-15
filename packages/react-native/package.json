@@ -1,6 +1,6 @@
 {
   "name": "@thesouschef/eslint-config-react-native",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common eslint configs for Sous Chef JS projects",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/the-sous-chef/standards#readme",
   "peerDependencies": {
-    "@thesouschef/eslint-config-react": "^1.0.1",
+    "@thesouschef/eslint-config-react": "^1.0.2",
     "eslint-plugin-react-native": "^4.0.0"
   },
   "publishConfig": {
