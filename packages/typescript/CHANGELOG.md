@@ -1,5 +1,11 @@
 # @thesouschef/eslint-config-ts
 
+## 1.0.5
+
+### Patch Changes
+
+- fix: update documentation to be correct
+
 ## 1.0.4
 
 ### Patch Changes

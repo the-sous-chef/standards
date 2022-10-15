@@ -8,14 +8,20 @@ npm install -D @thesouschef/eslint-config-ts
 In your [eslint config file](https://eslint.org/docs/latest/user-guide/configuring/) for vanilla TS projects, extend this library and add the following to your config:
 
 ```
+const path = require('path');
+
+...
+
 extends: ["@thesouschef/eslint-config", "@thesouschef/eslint-config-ts"],
 parserOptions: {
-    tsconfigRootDir: "./",
-    project: "./tsconfig.json",
+    tsconfigRootDir: __dirname,
+    project: path.resolve(__dirname, 'tsconfig.json'),
 },
-"import/resolver": {
-    typescript: {
-        project: "./tsconfig.json",
+settings: {
+    'import/resolver': {
+        typescript: {
+            project: path.resolve(__dirname, 'tsconfig.json'),
+        },
     },
 },
 ```
