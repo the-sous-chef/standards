@@ -1,6 +1,6 @@
 {
   "name": "@thesouschef/eslint-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Common eslint configs for Sous Chef JS projects",
   "main": "index.js",
   "scripts": {
@@ -31,5 +31,8 @@
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
