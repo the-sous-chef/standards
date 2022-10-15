@@ -10,10 +10,7 @@
     "prepare": "is-ci || sh ./scripts/prepare.sh",
     "publish-packages": "turbo run lint && changeset version && changeset publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/the-sous-chef/eslint-config.git"
-  },
+  "repository": "git+https://github.com/the-sous-chef/standards.git",
   "keywords": [
     "eslint",
     "prettier",
@@ -54,5 +51,7 @@
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0",
     "turbo": "^1.5.6"
-  }
+  },
+  "main": "index.js",
+  "private": true
 }
