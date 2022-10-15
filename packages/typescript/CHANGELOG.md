@@ -1,5 +1,11 @@
 # @thesouschef/eslint-config-ts
 
+## 1.0.3
+
+### Patch Changes
+
+- fix: try using cwd instead of relative path
+
 ## 1.0.2
 
 ### Patch Changes
