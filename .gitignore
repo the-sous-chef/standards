@@ -105,3 +105,6 @@ dist
 
 # Turbo
 .turbo
+
+# Yarn
+.yarn
