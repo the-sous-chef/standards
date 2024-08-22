@@ -23,7 +23,7 @@
     "*.(t|j)s(x)?": "npm run format"
   },
   "bugs": {
-    "url": "https://github.com/the-sous-chef/eslint-config/issues"
+    "url": "https://github.com/the-sous-chef/standards/issues"
   },
   "engines": {
     "node": ">=22.7.0"
