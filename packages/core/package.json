@@ -31,6 +31,7 @@
         "typescript-eslint": "^8.2.0"
     },
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     }
 }

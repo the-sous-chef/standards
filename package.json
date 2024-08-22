@@ -6,8 +6,7 @@
     "format": "nx run-many -t format",
     "format:check": "nx run-many -t format:check",
     "lint": "nx run-many -t lint",
-    "prepare": "is-ci || sh ./scripts/prepare.sh",
-    "publish": "nx run-many -t format:check lint && changeset version && changeset publish"
+    "prepare": "is-ci || sh ./scripts/prepare.sh"
   },
   "repository": "git+https://github.com/the-sous-chef/standards.git",
   "keywords": [
