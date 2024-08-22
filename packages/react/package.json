@@ -1,36 +1,36 @@
 {
-  "name": "@thesouschef/eslint-config-react",
-  "version": "1.0.2",
-  "description": "Common eslint configs for Sous Chef JS projects",
-  "main": "index.js",
-  "scripts": {
-    "format": "npm run lint -- --fix",
-    "lint": "eslint ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/the-sous-chef/standards.git"
-  },
-  "keywords": [
-    "eslint",
-    "prettier",
-    "javascript",
-    "typescript",
-    "react"
-  ],
-  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/the-sous-chef/standards/issues"
-  },
-  "homepage": "https://github.com/the-sous-chef/standards#readme",
-  "peerDependencies": {
-    "@thesouschef/eslint-config": "^1.0.2",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@thesouschef/eslint-config-react",
+    "version": "1.0.2",
+    "description": "Common eslint configs for Sous Chef JS projects",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier . --ignore-unknown --write",
+        "format:check": "prettier . --ignore-unknown --check",
+        "lint": "eslint ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/the-sous-chef/standards.git"
+    },
+    "keywords": [
+        "eslint",
+        "prettier",
+        "javascript",
+        "typescript",
+        "react"
+    ],
+    "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/the-sous-chef/standards/issues"
+    },
+    "type": "module",
+    "homepage": "https://github.com/the-sous-chef/standards#readme",
+    "peerDependencies": {
+        "eslint-plugin-jsx-a11y": "^6.9.0",
+        "eslint-plugin-react": "^7.35.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

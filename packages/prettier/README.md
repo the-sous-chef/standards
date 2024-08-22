@@ -13,4 +13,4 @@ Use the following string in your config:
 "@thesouschef/prettier"
 ```
 
-*NOTE:* We use prettier for formatting, which is run using [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier). As such, prettier is a required dependency. It is recommended that you use the prettier plugin for your editor in addition to the eslint plugin and turn off auto-formatting by any other plugin (including eslint).
+_NOTE:_ We use prettier for formatting, which is run using [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier). As such, prettier is a required dependency. It is recommended that you use the prettier plugin for your editor in addition to the eslint plugin and turn off auto-formatting by any other plugin (including eslint).

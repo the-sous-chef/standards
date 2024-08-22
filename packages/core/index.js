@@ -1,59 +1,25 @@
-module.exports = {
-    root: true,
-    env: {
-        browser: true,
-        node: true,
-        es2022: true,
-    },
-    extends: [
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "plugin:import/typescript",
-        "plugin:prettier/recommended",
-    ],
-    ignorePatterns: [".eslintrc.cjs", ".eslintrc.js", ".eslintrc.mjs"],
-    overrides: [
-        {
-            files: [
-                "*.js",
-                "*.cjs",
-                "vite.*",
-                "vitest.config.ts",
-                "vitest/**/*",
-            ],
-            rules: {
-                "import/no-extraneous-dependencies": "off",
-                "import/no-named-default": "off",
-                "@typescript-eslint/no-unused-vars": "off",
-                "@typescript-eslint/no-var-requires": "off",
-            },
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
+import tsplugin from "@typescript-eslint/eslint-plugin";
+
+export default tseslint.config(
+    eslint.configs.recommended,
+    ...tseslint.configs.recommendedTypeChecked.map((config) => ({
+        ...config,
+        files: ["**/*.ts"], // We use TS config only for TS files
+    })),
+    {
+        files: ["**/*.ts"],
+        ignores: ["**/node_modules/**", "**/tmp/**"],
+        plugins: {
+            "@typescript-eslint": tsplugin,
         },
-    ],
-    parserOptions: {
-        ecmaVersion: 13,
-        sourceType: "module",
-    },
-    plugins: ["import", "prettier"],
-    rules: {
-        "import/extensions": [
-            "error",
-            {
-                json: "always",
-                ts: "never",
-                tsx: "never",
-            },
-        ],
-        "import/prefer-default-export": "off",
-        "newline-after-var": ["error", "always"],
-        "no-confusing-arrow": ["error", { allowParens: false }],
-        "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
-    },
-    settings: {
-        "import/extensions": [".js", ".jsx"],
-        "import/resolver": {
-            node: {
-                extensions: [".js", ".jsx"],
+        languageOptions: {
+            ecmaVersion: "latest",
+            sourceType: "module",
+            parserOptions: {
+                project: true,
             },
         },
     },
-};
+);

@@ -1,29 +1,33 @@
 {
-  "name": "@thesouschef/prettier",
-  "version": "1.0.2",
-  "description": "Common prettier config for Sous Chef JS projects",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/the-sous-chef/standards.git"
-  },
-  "keywords": [
-    "prettier",
-    "javascript",
-    "typescript"
-  ],
-  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/the-sous-chef/standards/issues"
-  },
-  "homepage": "https://github.com/the-sous-chef/standards#readme",
-  "devDependencies": {
-    "prettier": "^2.7.1"
-  },
-  "peerDependencies": {
-    "prettier": "^2.7.1"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@thesouschef/prettier",
+    "version": "1.0.2",
+    "description": "Common prettier config for Sous Chef JS projects",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/the-sous-chef/standards.git"
+    },
+    "main": "index.js",
+    "keywords": [
+        "prettier",
+        "javascript",
+        "typescript"
+    ],
+    "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/the-sous-chef/standards/issues"
+    },
+    "homepage": "https://github.com/the-sous-chef/standards#readme",
+    "scripts": {
+        "format": "prettier . --ignore-unknown --write",
+        "format:check": "prettier . --ignore-unknown --check",
+        "lint": "eslint ."
+    },
+    "type": "module",
+    "peerDependencies": {
+        "prettier": "^3.3.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

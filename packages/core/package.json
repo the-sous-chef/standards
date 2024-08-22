@@ -1,38 +1,36 @@
 {
-  "name": "@thesouschef/eslint-config",
-  "version": "1.0.2",
-  "description": "Common eslint configs for Sous Chef JS projects",
-  "main": "index.js",
-  "scripts": {
-    "format": "npm run lint -- --fix",
-    "lint": "eslint ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/the-sous-chef/standards.git"
-  },
-  "keywords": [
-    "eslint",
-    "prettier",
-    "javascript"
-  ],
-  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/the-sous-chef/standards/issues"
-  },
-  "homepage": "https://github.com/the-sous-chef/standards#readme",
-  "peerDependencies": {
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.5.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1",
-    "prettier-eslint": "^15.0.1",
-    "prettier-eslint-cli": "^7.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@thesouschef/eslint-config",
+    "version": "1.0.2",
+    "description": "Common eslint configs for Sous Chef JS projects",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier . --ignore-unknown --write",
+        "format:check": "prettier . --ignore-unknown --check",
+        "lint": "eslint ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/the-sous-chef/standards.git"
+    },
+    "keywords": [
+        "eslint",
+        "prettier",
+        "javascript"
+    ],
+    "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/the-sous-chef/standards/issues"
+    },
+    "type": "module",
+    "homepage": "https://github.com/the-sous-chef/standards#readme",
+    "peerDependencies": {
+        "@eslint/js": "^8.57.0",
+        "@types/eslint__js": "^8.42.3",
+        "@typescript-eslint/eslint-plugin": "^8.2.0",
+        "typescript-eslint": "^8.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

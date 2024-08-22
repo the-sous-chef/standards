@@ -1,1 +1,1 @@
-module.export = require("./packages/prettier/index.json");
+export * from '@thesouschef/prettier';

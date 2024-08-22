@@ -1,7 +1,7 @@
 {
-    "name": "@thesouschef/eslint-config-react-native",
+    "name": "@thesouschef/eslint-config-next",
     "version": "1.0.2",
-    "description": "Common eslint configs for Sous Chef JS projects",
+    "description": "Eslint config for Next.js projects",
     "main": "index.js",
     "scripts": {
         "format": "prettier . --ignore-unknown --write",
@@ -15,10 +15,7 @@
     "keywords": [
         "eslint",
         "prettier",
-        "javascript",
-        "typescript",
-        "react",
-        "react-native"
+        "javascript"
     ],
     "author": "Brandon Webb (webb.c.brandon@gmail.com)",
     "license": "ISC",
@@ -28,7 +25,7 @@
     "type": "module",
     "homepage": "https://github.com/the-sous-chef/standards#readme",
     "peerDependencies": {
-        "@react-native/eslint-config": "^0.75.2"
+        "eslint-config-neon": "^0.2.0"
     },
     "publishConfig": {
         "access": "public"

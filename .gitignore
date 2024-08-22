@@ -103,8 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
-# Turbo
-.turbo
-
 # Yarn
 .yarn
+
+
+
+.nx/cache
+.nx/workspace-data

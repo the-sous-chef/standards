@@ -1,14 +1,13 @@
 {
-  "name": "standards",
+  "name": "@thesouschef/standards",
   "version": "0.0.0",
   "description": "Common style and standards configs for Sous Chef JS/TS projects",
-  "packageManager": "yarn@3.2.4",
   "scripts": {
-    "dev": "turbo run dev",
-    "format": "turbo run format",
-    "lint": "turbo run lint",
+    "format": "nx run-many -t format",
+    "format:check": "nx run-many -t format:check",
+    "lint": "nx run-many -t lint",
     "prepare": "is-ci || sh ./scripts/prepare.sh",
-    "publish-packages": "turbo run lint && changeset version && changeset publish"
+    "publish-packages": "nx run-many -t format:check lint && changeset version && changeset publish"
   },
   "repository": "git+https://github.com/the-sous-chef/standards.git",
   "keywords": [
@@ -26,31 +25,31 @@
   "bugs": {
     "url": "https://github.com/the-sous-chef/eslint-config/issues"
   },
-  "volta": {
-    "node": "18.7.0",
-    "yarn": "1.22.19"
+  "engines": {
+    "node": ">=22.7.0"
   },
+  "engineStrict": true,
+  "volta": {
+    "node": "22.7.0"
+  },
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "@changesets/cli": "^2.25.0",
-    "@commitlint/config-conventional": "^17.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "@typescript-eslint/parser": "^5.40.0",
-    "commitlint": "^17.1.2",
-    "eslint": "^8.25.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.5.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
+    "@changesets/cli": "^2.27.7",
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "commitlint": "^19.4.0",
+    "eslint": "^8.57.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.5",
     "is-ci": "^3.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "prettier-eslint": "^15.0.1",
-    "prettier-eslint-cli": "^7.1.0",
-    "turbo": "^1.5.6"
+    "lint-staged": "^15.2.9",
+    "nx": "19.6.2",
+    "pinst": "^3.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   },
   "main": "index.js",
   "private": true

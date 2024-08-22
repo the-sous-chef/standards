@@ -1,37 +1,24 @@
-module.exports = {
-    extends: [
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        "plugin:react-hooks/recommended",
-        "plugin:jsx-a11y/recommended",
-    ],
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
+import react from "eslint-plugin-react";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import globals from "globals";
+
+// TODO add eslint-plugin-react-hooks when https://github.com/facebook/react/pull/30774 is merged
+export default [
+    {
+        files: ["**/*.{jsx,mjsx,tsx,mtsx}"],
+        ...jsxA11y.flatConfigs.recommended,
     },
-    plugins: ["react", "jsx-a11y"],
-    rules: {
-        "react/jsx-filename-extension": [
-            "error",
-            { extensions: [".jsx", ".tsx"] },
-        ],
-        "react/jsx-sort-props": [
-            "error",
-            {
-                callbacksLast: true,
-                ignoreCase: true,
-                noSortAlphabetically: false,
-                shorthandFirst: true,
+    {
+        files: ["**/*.{jsx,mjsx,tsx,mtsx}"],
+        ...react.configs.flat.recommended,
+    },
+    {
+        files: ["**/*.{jsx,mjsx,ts,tsx,mtsx}"],
+        languageOptions: {
+            globals: {
+                ...globals.serviceworker,
+                ...globals.browser,
             },
-        ],
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off",
-    },
-    settings: {
-        react: {
-            pragma: "React",
-            version: "detect",
         },
     },
-};
+];
