@@ -7,7 +7,7 @@
     "format:check": "nx run-many -t format:check",
     "lint": "nx run-many -t lint",
     "prepare": "is-ci || sh ./scripts/prepare.sh",
-    "publish-packages": "nx run-many -t format:check lint && changeset version && changeset publish"
+    "publish": "nx run-many -t format:check lint && changeset version && changeset publish"
   },
   "repository": "git+https://github.com/the-sous-chef/standards.git",
   "keywords": [
