@@ -25,7 +25,9 @@
     "type": "module",
     "homepage": "https://github.com/the-sous-chef/standards#readme",
     "peerDependencies": {
-        "eslint-config-neon": "^0.2.0"
+        "eslint": "^9.0.0",
+        "eslint-config-neon": "^0.2.0",
+        "globals": "^15.9.0"
     },
     "publishConfig": {
         "access": "public",

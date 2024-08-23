@@ -28,7 +28,8 @@
     "type": "module",
     "homepage": "https://github.com/the-sous-chef/standards#readme",
     "peerDependencies": {
-        "@react-native/eslint-config": "^0.75.2"
+        "@react-native/eslint-config": "^0.75.2",
+        "eslint": "^9.0.0"
     },
     "publishConfig": {
         "access": "public",

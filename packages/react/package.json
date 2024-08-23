@@ -27,8 +27,11 @@
     "type": "module",
     "homepage": "https://github.com/the-sous-chef/standards#readme",
     "peerDependencies": {
+        "@eslint/compat": "1.1.1",
+        "eslint": "^9.0.0",
         "eslint-plugin-jsx-a11y": "^6.9.0",
-        "eslint-plugin-react": "^7.35.0"
+        "eslint-plugin-react": "^7.35.0",
+        "globals": "^15.9.0"
     },
     "publishConfig": {
         "access": "public",
