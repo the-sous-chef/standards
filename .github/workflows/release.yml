@@ -8,6 +8,9 @@ on:
         branches:
             - master
 
+permissions:
+    actions: write
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
@@ -42,5 +45,5 @@ jobs:
               with:
                   publish: npx changeset publish
               env:
-                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
