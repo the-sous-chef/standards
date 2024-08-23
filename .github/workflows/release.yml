@@ -9,7 +9,8 @@ on:
             - master
 
 permissions:
-    actions: write
+    contents: write
+    pages: write
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
