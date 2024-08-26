@@ -15,6 +15,7 @@
             }
         },
         "changelog": {
+            "automaticFromRef": true,
             "projectChangelogs": true,
             "workspaceChangelog": {
                 "createRelease": "github"
