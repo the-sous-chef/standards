@@ -1,21 +1,24 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "master",
-  "release": {
-    "projects": ["packages/*"],
-    "projectsRelationship": "independent",
-    "git": {
-      "commit": true,
-      "tag": true
-    },
-    "version": {
-      "conventionalCommits": true,
-    },
-    "changelog": {
-      "projectChangelogs": true,
-      "workspaceChangelog": {
-        "createRelease": "github"
-      }
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "defaultBase": "master",
+    "release": {
+        "projects": ["packages/*"],
+        "projectsRelationship": "independent",
+        "git": {
+            "commit": true,
+            "tag": true
+        },
+        "version": {
+            "conventionalCommits": true,
+            "generatorOptions": {
+                "fallbackCurrentVersionResolver": "disk"
+            }
+        },
+        "changelog": {
+            "projectChangelogs": true,
+            "workspaceChangelog": {
+                "createRelease": "github"
+            }
+        }
     }
-  }
 }

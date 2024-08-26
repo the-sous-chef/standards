@@ -1,4 +1,5 @@
 # Standards
+
 Common standards/styles configs for Sous Chef JS/TS projects
 
 ## Developing
@@ -21,7 +22,7 @@ npm install -D @thesouschef/eslint-config
 For pure typescript projects:
 
 ```ts
-import config from '@thesouschef/eslint-config';
+import config from "@thesouschef/eslint-config";
 
 export default config;
 ```
@@ -41,8 +42,8 @@ npm install -D @thesouschef/eslint-config-react
 ```
 
 ```ts
-import config from '@thesouschef/eslint-config';
-import react from '@thesouschef/eslint-config-react';
+import config from "@thesouschef/eslint-config";
+import react from "@thesouschef/eslint-config-react";
 
 export default [...config, ...react];
 ```
@@ -54,9 +55,9 @@ npm install -D @thesouschef/eslint-config-next
 ```
 
 ```ts
-import config from '@thesouschef/eslint-config';
-import react from '@thesouschef/eslint-config-react';
-import next from '@thesouschef/eslint-config-next'
+import config from "@thesouschef/eslint-config";
+import react from "@thesouschef/eslint-config-react";
+import next from "@thesouschef/eslint-config-next";
 
 export default [...config, ...react, ...next];
 ```
@@ -70,8 +71,8 @@ npm install -D @thesouschef/eslint-config-react-native
 ```
 
 ```ts
-import config from '@thesouschef/eslint-config';
-import reactNative from '@thesouschef/eslint-config-react-native';
+import config from "@thesouschef/eslint-config";
+import reactNative from "@thesouschef/eslint-config-react-native";
 
 export default [...config, ...reactNative];
 ```
@@ -85,7 +86,7 @@ npm install -D @thesouschef/prettier
 Create a `.prettierrc.js` file with the following contents:
 
 ```js
-export * from '@thesouschef/prettier';
+export * from "@thesouschef/prettier";
 ```
 
 If you wish to override any rules, then use the rules as such:

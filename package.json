@@ -1,65 +1,65 @@
 {
-  "name": "@thesouschef/standards",
-  "version": "0.0.0",
-  "description": "Common style and standards configs for Sous Chef JS/TS projects",
-  "scripts": {
-    "format": "nx run-many -t format",
-    "format:check": "nx run-many -t format:check",
-    "lint": "nx run-many -t lint",
-    "prepare": "is-ci || sh ./scripts/prepare.sh"
-  },
-  "repository": "git+https://github.com/the-sous-chef/standards.git",
-  "keywords": [
-    "eslint",
-    "prettier",
-    "javascript",
-    "typescript",
-    "react"
-  ],
-  "author": "Brandon Webb (webb.c.brandon@gmail.com)",
-  "license": "ISC",
-  "lint-staged": {
-    "*.(t|j)s(x)?": "npm run format"
-  },
-  "bugs": {
-    "url": "https://github.com/the-sous-chef/standards/issues"
-  },
-  "engines": {
-    "node": ">=22.7.0"
-  },
-  "engineStrict": true,
-  "volta": {
-    "node": "22.7.0"
-  },
-  "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
-  "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@nx/js": "^19.6.2",
-    "@swc-node/register": "~1.9.1",
-    "@swc/core": "~1.5.7",
-    "@swc/helpers": "~0.5.11",
-    "commitlint": "^19.4.0",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
-    "husky": "^9.1.5",
-    "is-ci": "^3.0.1",
-    "lint-staged": "^15.2.9",
-    "nx": "19.6.2",
-    "pinst": "^3.0.0",
-    "typescript": "^5.5.4"
-  },
-  "peerDependencies": {
-    "eslint": "^9.9.1",
-    "globals": "^15.9.0",
-    "prettier": "^3.3.3"
-  },
-  "overrides": {
-    "eslint": "^9.9.1"
-  },
-  "main": "index.js",
-  "private": true,
-  "dependencies": {}
+    "name": "@thesouschef/standards",
+    "version": "0.0.0",
+    "description": "Common style and standards configs for Sous Chef JS/TS projects",
+    "scripts": {
+        "format": "nx run-many -t format && prettier . --ignore-unknown --write ",
+        "format:check": "nx run-many -t format:check && prettier . --ignore-unknown --check",
+        "lint": "nx run-many -t lint",
+        "prepare": "is-ci || sh ./scripts/prepare.sh"
+    },
+    "repository": "git+https://github.com/the-sous-chef/standards.git",
+    "keywords": [
+        "eslint",
+        "prettier",
+        "javascript",
+        "typescript",
+        "react"
+    ],
+    "author": "Brandon Webb (webb.c.brandon@gmail.com)",
+    "license": "ISC",
+    "lint-staged": {
+        "*.(t|j)s(x)?": "npm run format"
+    },
+    "bugs": {
+        "url": "https://github.com/the-sous-chef/standards/issues"
+    },
+    "engines": {
+        "node": ">=22.7.0"
+    },
+    "engineStrict": true,
+    "volta": {
+        "node": "22.7.0"
+    },
+    "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "@commitlint/cli": "^19.4.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "@nx/js": "^19.6.2",
+        "@swc-node/register": "~1.9.1",
+        "@swc/core": "~1.5.7",
+        "@swc/helpers": "~0.5.11",
+        "commitlint": "^19.4.0",
+        "conventional-changelog-conventionalcommits": "^8.0.0",
+        "husky": "^9.1.5",
+        "is-ci": "^3.0.1",
+        "lint-staged": "^15.2.9",
+        "nx": "19.6.2",
+        "pinst": "^3.0.0",
+        "typescript": "^5.5.4"
+    },
+    "peerDependencies": {
+        "eslint": "^9.9.1",
+        "globals": "^15.9.0",
+        "prettier": "^3.3.3"
+    },
+    "overrides": {
+        "eslint": "^9.9.1"
+    },
+    "main": "index.js",
+    "private": true,
+    "dependencies": {}
 }
