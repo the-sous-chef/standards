@@ -1,6 +1,6 @@
 {
     "name": "@thesouschef/standards",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Common style and standards configs for Sous Chef JS/TS projects",
     "scripts": {
         "format": "nx run-many -t format && prettier . --ignore-unknown --write ",
