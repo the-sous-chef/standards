@@ -10,9 +10,6 @@
     },
     "version": {
       "conventionalCommits": true,
-      "generatorOptions": {
-        "specifierSource": "conventional-commits"
-      }
     },
     "changelog": {
       "projectChangelogs": true,
