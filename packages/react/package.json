@@ -34,8 +34,7 @@
         "globals": "^15.9.0"
     },
     "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
+        "access": "public"
     },
     "overrides": {
         "eslint": "^9.9.1"

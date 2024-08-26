@@ -32,7 +32,6 @@
         "eslint": "^9.9.1"
     },
     "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
+        "access": "public"
     }
 }
