@@ -1,6 +1,6 @@
 {
     "name": "@thesouschef/eslint-config-next",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Eslint config for Next.js projects",
     "main": "index.js",
     "scripts": {
