@@ -8,10 +8,12 @@
             "commit": true,
             "tag": true
         },
+
         "version": {
             "conventionalCommits": true,
             "generatorOptions": {
-                "fallbackCurrentVersionResolver": "disk"
+                "fallbackCurrentVersionResolver": "disk",
+                "updateDependents": "auto"
             }
         },
         "changelog": {
