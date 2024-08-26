@@ -11,6 +11,7 @@ on:
 permissions:
     contents: write
     pages: write
+    actions: read
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -19,13 +20,27 @@ jobs:
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/master'
         steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  # We need to fetch all branches and commits so that Nx affected has a base to compare against.
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
               with:
                   node-version: 22
-            - run: npm ci
-            - run: npm run format:check
-            - run: npm run lint
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Derive appropriate SHAs for base and head for `nx affected` commands
+              id: setSHAs
+              uses: nrwl/nx-set-shas@v4
+
+            - name: Run linting and formatting checks
+              run: npx nx affected -t format:check lint
 
     publish-npm:
         needs: lint
@@ -34,15 +49,27 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
+                  cache: "npm"
+
             - name: Install dependencies
               run: npm ci
-            - name: Publish to npm
-              id: changesets
-              uses: changesets/action@v1
+
+            - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+              run: npm audit signatures
+
+            - name: Print Environment Info
+              run: npx nx report
+
+            - name: Create release
+              run: npx nx release --skip-publish
+
+            - name: Publish packages
+              run: npx nx release publish
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
