@@ -8,10 +8,9 @@
             "commit": true,
             "tag": true
         },
-
         "version": {
-            "conventionalCommits": true,
             "generatorOptions": {
+                "specifierSource": "conventional-commits",
                 "fallbackCurrentVersionResolver": "disk",
                 "updateDependents": "auto"
             }

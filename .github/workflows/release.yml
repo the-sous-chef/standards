@@ -7,6 +7,10 @@ on:
     push:
         branches:
             - master
+        paths:
+            # ignore push events that only include package.json or CHANGELOG.md files
+            - "!package.json"
+            - "!CHANGELOG.md"
 
 permissions:
     contents: write
@@ -52,6 +56,14 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+              with:
+                  # We need to fetch all branches and commits so that Nx affected has a base to compare against.
+                  fetch-depth: 0
+
+            - name: Fetch Tags
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: git fetch origin --tags
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
