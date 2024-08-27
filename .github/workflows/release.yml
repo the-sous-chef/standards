@@ -7,10 +7,6 @@ on:
     push:
         branches:
             - master
-        paths:
-            # ignore push events that only include package.json or CHANGELOG.md files
-            - "!package.json"
-            - "!CHANGELOG.md"
 
 permissions:
     contents: write
