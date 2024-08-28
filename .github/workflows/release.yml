@@ -83,7 +83,7 @@ jobs:
               run: |
                   git config --global user.email "webb.c.brandon@gmail.com"
                   git config --global user.name "Github Actions"
-                  npx nx release --skip-publish
+                  npx nx release --skip-publish --verbose
 
             - name: Publish packages
               run: npx nx release publish
