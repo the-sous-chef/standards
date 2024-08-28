@@ -84,9 +84,10 @@ jobs:
                   git config --global user.email "webb.c.brandon@gmail.com"
                   git config --global user.name "Brandon Webb"
                   npx nx release --skip-publish --verbose
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Publish packages
               run: npx nx release publish
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
