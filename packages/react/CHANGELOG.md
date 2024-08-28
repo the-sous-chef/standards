@@ -1,3 +1,17 @@
+## 2.0.1 (2024-08-28)
+
+### 🩹 Fixes
+
+- use github-actions for git config
+
+- comment out code to fix eslint failure
+
+- resync package lock
+
+### ❤️ Thank You
+
+- Brandon Webb
+
 # 2.0.0 (2024-08-28)
 
 ### 🚀 Features
