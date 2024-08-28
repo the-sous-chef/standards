@@ -1,3 +1,37 @@
+# 2.0.0 (2024-08-28)
+
+### 🚀 Features
+
+- ⚠️ force major version 2.0.0
+
+### 🩹 Fixes
+
+- add updateDependents to release
+
+- disable jsxa11y eslint
+
+- fetch full depth and tags to trigger release in ci
+
+- remove line attempting to disable pushes with certain file changes
+
+- add currentVersionResolver to nx release
+
+- set eslint overrides in packages to ensure v9
+
+- sync package versions and add verbose to nx release
+
+- try using personal name in git config
+
+- add github env token to the correct step
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ force major version 2.0.0
+
+### ❤️ Thank You
+
+- Brandon Webb
+
 # @thesouschef/eslint-config
 
 ## 1.0.2
