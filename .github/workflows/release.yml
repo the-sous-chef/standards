@@ -81,8 +81,8 @@ jobs:
 
             - name: Create release
               run: |
-                  git config --global user.email "webb.c.brandon@gmail.com"
-                  git config --global user.name "Brandon Webb"
+                  git config user.name github-actions
+                  git config user.email github-actions@github.com
                   npx nx release --skip-publish --verbose
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
