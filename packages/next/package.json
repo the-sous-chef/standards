@@ -31,5 +31,8 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "overrides": {
+        "eslint": "^9.9.1"
     }
 }
