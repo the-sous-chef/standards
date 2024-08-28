@@ -1,7 +1,7 @@
 import react from "eslint-plugin-react";
 // FIXME: enable when v9 is supported
 // import jsxA11y from "eslint-plugin-jsx-a11y";
-import { fixupRule } from "@eslint/compat";
+// import { fixupRule } from "@eslint/compat";
 import globals from "globals";
 
 // TODO add eslint-plugin-react-hooks when https://github.com/facebook/react/pull/30774 is merged
