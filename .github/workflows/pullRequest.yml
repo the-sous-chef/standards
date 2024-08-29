@@ -11,7 +11,6 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
     lint:
         runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/master'
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
@@ -25,8 +24,8 @@ jobs:
                   node-version: 22
                   cache: "npm"
 
-            - name: Authenticate with private NPM package
-              run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+            # - name: Authenticate with private NPM package
+            #   run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
             - name: Install dependencies
               run: npm ci
